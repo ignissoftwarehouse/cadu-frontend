@@ -1,5 +1,9 @@
 body {
-  font-family: var(--font-family)
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -39,7 +43,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  // padding: 1rem;
   box-sizing: inherit;
   position: relative;
 }
