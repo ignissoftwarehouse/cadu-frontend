@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProductListModule } from '../shared/components/product-list/product-list.module';
-import { PresentationModule } from '../shared/components/presentation/presentation.module';
+import { PresentationModule } from '../pages/presentation/presentation.module';
+import { ProductListModule } from '../pages/product-list/product-list.module';
 
 @Component({
   selector: 'app-root',
