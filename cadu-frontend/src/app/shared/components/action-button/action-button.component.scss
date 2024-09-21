@@ -12,14 +12,8 @@
   justify-content: center;
 
   img {
-    height: 63px;
+    height: 100%;
     transition: filter 0.3s ease;
-  }
-
-  @media (max-width: 600px) {
-    width: 170px;
-    height: 63px;
-    font-size: 14px;
   }
 
   &:hover {
@@ -30,5 +24,19 @@
     img {
       filter: invert(37%) sepia(66%) saturate(5017%) hue-rotate(110deg) brightness(99%) contrast(96%);
     }
+  }
+}
+@media (min-width: 2560px) {
+  .store-button {
+    width: 270px;
+    height: 93px;
+  }
+ }
+
+@media (max-width: 600px) {
+  .store-button {
+    width: 170px;
+    height: 63px;
+    font-size: 14px;
   }
 }
