@@ -1,0 +1,129 @@
+@import "../../../../assets/scss/styles.scss";
+
+.product-list {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  padding: 0 10px;
+  background-color: #F8F8F8;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-bottom: 20px;
+      gap: 60px;
+
+      &__text-container {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        text-align: justify;
+        justify-content: center;
+        align-items: flex-end;
+
+        &__headline {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+          font-family: var(--font-family);
+          text-align: justify;
+        }
+
+        &__subheadline {
+          font-size: 1rem;
+          font-weight: 400;
+          font-family: var(--font-family);
+          text-align: justify;
+        }
+
+        &__store-buttons {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 10px;
+          margin-top: 4rem;
+        }
+      }
+
+      &__max-width-text {
+        max-width: 29rem;
+      }
+
+      &__images {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+
+        &__group--img,
+        &__animation--img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+
+        &__animation--img {
+          max-width: 25rem;
+        }
+
+        &__divider {
+          &--vertical {}
+        }
+      }
+
+      &__max-width-img {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 1585px) {
+  .product-list {
+    &__container {
+      &__content {
+        flex-direction: column;
+
+        &__text-container {
+          width: 100%;
+          align-items: center;
+
+          &__headline {
+            order: 1;
+            text-align: center;
+          }
+
+          &__store-buttons {
+            order: 2;
+          }
+
+          &__subheadline {
+            order: 3;
+            text-align: center;
+          }
+        }
+
+        &__images {
+          width: 100%;
+          align-items: flex-start;
+
+          &__divider {
+            &--vertical {
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+}
