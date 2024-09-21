@@ -1,4 +1,4 @@
-@import "../../../../assets/scss/styles.scss";
+@import "../../../assets/scss/styles.scss";
 
 .product-list {
   display: flex;
@@ -7,7 +7,7 @@
   height: 70vh;
   position: relative;
   padding: 0 10px;
-  background-color: #F8F8F8;
+  background-color: var(--gray-200);
 
   &__container {
     display: flex;
