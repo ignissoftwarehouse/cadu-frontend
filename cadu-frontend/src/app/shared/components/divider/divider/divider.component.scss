@@ -1,8 +1,8 @@
 .divider {
   width: 100vw;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 3px solid var(--gray-400);
   position: absolute;
-  bottom: 22%; //34%
+  bottom: 20%; //34%
   left: 0;
   z-index: 9;
 }
