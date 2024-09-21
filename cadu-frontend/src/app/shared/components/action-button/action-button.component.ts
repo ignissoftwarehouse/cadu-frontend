@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-action-button',
@@ -8,4 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ActionButtonComponent {
   @Input() public src!: string;
   @Input() public alt!: string;
+  @Input() variant: 'primary' | 'secondary' = 'primary';
+  @Input() icon: boolean = false;
+  @Input() buttonText!: string;
+
+
 }
