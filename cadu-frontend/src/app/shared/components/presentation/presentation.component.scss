@@ -1,3 +1,124 @@
-:host {
-  display: block;
+@import "../../../../assets/scss/styles.scss";
+
+.presentation {
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      margin-bottom: 20px;
+      text-align: justify;
+      gap: 4rem;
+      justify-content: center;
+
+      &__text-container {
+        width: 100%;
+        max-width: 36rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+
+        &__logo {
+          top: 20px;
+          width: auto;
+          max-width: 250px;
+          margin-bottom: 5rem;
+          z-index: 10;
+        }
+
+        &__headline {
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 10px;
+          font-family: var(--font-family);
+          text-align: justify;
+        }
+
+        &__subheadline {
+          font-size: 1rem;
+          font-weight: 400;
+          font-family: var(--font-family);
+          text-align: justify;
+        }
+
+        &__store-buttons {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 10px;
+          margin-top: 4rem;
+        }
+      }
+
+      &__images {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        &__animation {
+          z-index: 99;
+        }
+
+        &__divider {
+          &--vertical {
+            margin: 0 -10px -49px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1585px) {
+  .presentation {
+    &__container {
+      //
+      &__content {
+        flex-direction: column;
+
+        &__text-container {
+          //
+
+          &__logo {
+            //
+          }
+
+          &__headline {
+            //
+            order: 1;
+          }
+
+          &__subheadline {
+            //
+            order: 3;
+          }
+
+          &__store-buttons {
+            //
+            order: 2;
+          }
+        }
+
+        &__images {
+          //
+
+          &__divider {
+            &--vertical {
+              // }
+            }
+          }
+        }
+      }
+
+      &__divider {
+        &--horizontal {
+          //
+        }
+      }
+    }
+  }
 }
