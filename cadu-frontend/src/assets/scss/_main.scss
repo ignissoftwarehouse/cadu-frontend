@@ -35,7 +35,7 @@ p {
   font-size: 1rem;
   font-weight: normal;
   margin: 0;
-  color: var(--gray-700);
+  color: var(--black);
 }
 
 main {
@@ -45,4 +45,8 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   box-sizing: border-box;
+}
+
+strong{
+  font-weight: 900;
 }

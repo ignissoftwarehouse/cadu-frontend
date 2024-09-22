@@ -1,13 +1,12 @@
 @import "../../../assets/scss/styles.scss";
 
-.product-list {
+.tension-out {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 70vh;
   position: relative;
   padding: 0 10px;
-  background-color: var(--gray-200);
 
   &__container {
     display: flex;
@@ -23,7 +22,7 @@
       margin-top: 5rem;
 
       &__text-container {
-        width: 35%;
+        width: 45%;
         display: flex;
         flex-direction: column;
         padding: 0 10px;
@@ -32,8 +31,8 @@
         align-items: flex-end;
 
         &__headline {
-          font-size: 2rem;
-          font-weight: 900;
+          font-size: 2.125rem;
+          font-weight: 700;
           margin-bottom: 10px;
           font-family: var(--font-family);
           text-align: justify;
@@ -49,7 +48,7 @@
         &__store-buttons {
           display: flex;
           align-items: center;
-          justify-content: flex-end;
+          justify-content: flex-start;
           gap: 10px;
           margin-top: 4rem;
         }
@@ -62,19 +61,17 @@
       &__images {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         width: 50%;
 
-        &__group--img,
         &__animation--img {
-          max-width: 100%;
           height: auto;
           object-fit: contain;
         }
 
         &__animation--img {
-          max-width: 25rem;
+          max-width: 30rem;
         }
       }
     }
@@ -82,7 +79,7 @@
 }
 
 @media (min-width: 2790px) {
-  .product-list {
+  .tension-out {
     &__container__content {
       max-width: 3840px;
       gap: 6rem;
@@ -124,11 +121,12 @@
 }
 
 @media (max-width: 1900px) {
-  .product-list {
+  .tension-out {
     &__container__content {
       &__text-container {
         &__headline {
-          font-size: 1.75rem;
+          font-size: 2.125rem;
+          font-weight: 900;
         }
 
         &__subheadline {
@@ -140,7 +138,7 @@
 }
 
 @media (max-width: 1130px) {
-  .product-list {
+  .tension-out {
     &__container__content {
       flex-direction: column;
       text-align: center;
@@ -181,7 +179,7 @@
 }
 
 @media (max-width: 480px) {
-  .product-list {
+  .tension-out {
     &__container__content {
       &__text-container {
         &__headline {
