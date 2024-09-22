@@ -1,46 +1,37 @@
 @import "../../../assets/scss/styles.scss";
 
-.presentation {
+.tension-out {
   display: flex;
   flex-direction: row;
-  width: 100vw;
-  height: 70%;
+  width: 100%;
+  height: 70vh;
   position: relative;
   padding: 0 10px;
-  border-bottom: 3px solid var(--gray-400);
 
   &__container {
     display: flex;
     flex-direction: row;
     width: 100vw;
 
-
     &__content {
       display: flex;
       flex-direction: row;
       width: 100%;
-      gap: 4rem;
-      justify-content: center;
-      margin: 20px;
+      margin-bottom: 20px;
+      gap: 60px;
+      margin-top: 5rem;
 
       &__text-container {
-        width: 50%;
+        width: 45%;
         display: flex;
         flex-direction: column;
         padding: 0 10px;
-        align-items: center;
-
-
-        &__logo {
-          top: 20px;
-          width: auto;
-          max-width: 250px;
-          margin-bottom: 5rem;
-          z-index: 10;
-        }
+        text-align: justify;
+        justify-content: center;
+        align-items: flex-end;
 
         &__headline {
-          font-size: 1.5rem;
+          font-size: 2.125rem;
           font-weight: 700;
           margin-bottom: 10px;
           font-family: var(--font-family);
@@ -64,39 +55,23 @@
       }
 
       &__max-width-text {
-        max-width: 36rem;
+        max-width: 29rem;
       }
 
       &__images {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
         width: 50%;
 
-
-        &__animation {
-          z-index: 99;
-          max-width: 100vw;
-          width: 27rem;
-          position: relative;
+        &__animation--img {
+          height: auto;
           object-fit: contain;
         }
 
-        &__divider {
-          &--vertical {
-            margin-bottom: -145px;
-          }
-        }
-
-        &__group {
-          width: 100%;
-          height: 66%;
-          max-width: 100vw;
-          bottom: -55px;
-          position: relative;
-          object-fit: contain;
-
-
+        &__animation--img {
+          max-width: 30rem;
         }
       }
     }
@@ -104,7 +79,7 @@
 }
 
 @media (min-width: 2790px) {
-  .presentation {
+  .tension-out {
     &__container__content {
       max-width: 3840px;
       gap: 6rem;
@@ -133,10 +108,6 @@
           bottom: -70px;
         }
 
-        &__divider {
-          &--vertical {}
-        }
-
         &__group {
           width: 100%;
           height: 66%;
@@ -149,20 +120,13 @@
   }
 }
 
-@media (max-width: 2790px) {
-  .presentation {
-    &__container__content__images__animation {
-      bottom: -75px;
-    }
-  }
-}
-
 @media (max-width: 1900px) {
-  .presentation {
+  .tension-out {
     &__container__content {
       &__text-container {
         &__headline {
-          font-size: 1.75rem;
+          font-size: 2.125rem;
+          font-weight: 900;
         }
 
         &__subheadline {
@@ -174,7 +138,7 @@
 }
 
 @media (max-width: 1130px) {
-  .presentation {
+  .tension-out {
     &__container__content {
       flex-direction: column;
       text-align: center;
@@ -207,8 +171,7 @@
 
       &__images {
         &__animation {
-          bottom: -46px;
-
+          width: auto;
         }
       }
     }
@@ -216,7 +179,7 @@
 }
 
 @media (max-width: 480px) {
-  .presentation {
+  .tension-out {
     &__container__content {
       &__text-container {
         &__headline {

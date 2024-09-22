@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PresentationComponent } from './presentation.component';
+import { ProductListComponent } from './product-list.component';
 import { ActionButtonModule } from '../../shared/components/action-button/action-button.module';
 
 @NgModule({
-  declarations: [PresentationComponent],
+  declarations: [ProductListComponent],
   imports: [
     CommonModule,
     ActionButtonModule
   ],
-  exports: [PresentationComponent]
+  exports: [ProductListComponent]
+
 })
-export class PresentationModule { }
+export class ProductListModule { }

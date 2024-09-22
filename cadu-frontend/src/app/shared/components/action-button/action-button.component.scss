@@ -1,0 +1,46 @@
+.store-button {
+  width: 170px;
+  height: 63px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.primary {
+    background-color: var(--primary);
+    color: white;
+
+    @media (max-width: 600px) {
+      width: 170px;
+      height: 63px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+
+      img {
+        filter: invert(37%) sepia(66%) saturate(5017%) hue-rotate(110deg) brightness(99%) contrast(96%);
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: var(--secondary);
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    width: 370px;
+
+    &:hover {
+      background-color: var(--white);
+      color: var(--secondary);
+      border: 2px solid var(--secondary);
+    }
+  }
+}
