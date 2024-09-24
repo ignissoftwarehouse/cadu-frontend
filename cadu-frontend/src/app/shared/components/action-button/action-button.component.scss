@@ -12,6 +12,8 @@
   &.primary {
     background-color: var(--primary);
     color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
 
     @media (max-width: 600px) {
       width: 170px;
@@ -42,5 +44,9 @@
       color: var(--secondary);
       border: 2px solid var(--secondary);
     }
+  }
+
+  &.size {
+    width:  23.125rem;
   }
 }
