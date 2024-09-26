@@ -1,0 +1,149 @@
+@import "../../../assets/scss/styles.scss";
+
+.routine {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  position: relative;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__content__images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--bottom {
+      position: absolute;
+      bottom: 0;
+      width: 2000px;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__content__image {
+    position: absolute;
+    width: 2000px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    margin-left: -650px;
+  }
+
+  &__content__image-compra {
+    bottom: 50px;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__content__text {
+    width: 32rem;
+    text-align: end;
+    padding: 20px;
+    font-family: var(--font-family);
+  }
+
+  &__headline {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 30px;
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+    display: block;
+    line-height: 1.6;
+  }
+
+  &__cta {
+    font-size: 1.23em;
+    margin-top: 30px;
+  }
+
+  &__store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__store-button {
+    width: 150px;
+    height: auto;
+  }
+
+  &__social-media {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+    p{
+      color: var(--white);
+      font-family: var(--font-family);
+    }
+  }
+
+  &__logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__social-icons a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+  }
+
+  &__social-icons a:hover {
+    color: #007BFF;
+  }
+}
+
+@media (max-width: 768px) {
+  .routine__content {
+    flex-direction: column;
+  }
+
+  .routine__content__text {
+    padding: 0;
+  }
+
+  .routine__store-button {
+    width: 120px;
+  }
+
+  .routine__social-media {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .routine__logo {
+    width: 80px;
+  }
+}
