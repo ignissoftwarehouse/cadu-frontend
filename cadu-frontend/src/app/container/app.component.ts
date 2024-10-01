@@ -13,6 +13,4 @@ import { RoutineModule } from "../pages/routine/routine.module";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'cadu-frontend';
-}
+export class AppComponent { }
