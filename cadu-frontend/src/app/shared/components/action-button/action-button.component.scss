@@ -9,16 +9,25 @@
   align-items: center;
   justify-content: center;
 
+  // Function to convert color to a filter approximation
+  @function color-filter($color) {
+    @if $color == var(--primary) {
+      @return invert(37%) sepia(66%) saturate(5017%) hue-rotate(110deg) brightness(99%) contrast(96%);
+    }
+    @else if $color == var(--secondary) {
+      @return invert(59%) sepia(77%) saturate(2548%) hue-rotate(324deg) brightness(98%) contrast(102%);
+    }
+    @return none;
+  }
+
   &.primary {
     background-color: var(--primary);
-    color: white;
+    color: var(--white);
     font-size: 1.25rem;
     font-weight: bold;
 
-    @media (max-width: 600px) {
-      width: 170px;
-      height: 63px;
-      font-size: 14px;
+    img {
+      filter: color-filter(var(--white));
     }
 
     &:hover {
@@ -27,7 +36,7 @@
       border: 2px solid var(--primary);
 
       img {
-        filter: invert(37%) sepia(66%) saturate(5017%) hue-rotate(110deg) brightness(99%) contrast(96%);
+        filter: color-filter(var(--primary));
       }
     }
   }
@@ -39,14 +48,40 @@
     font-size: 1.25rem;
     width: 370px;
 
+    img {
+      filter: color-filter(white);
+    }
+
     &:hover {
       background-color: var(--white);
       color: var(--secondary);
       border: 2px solid var(--secondary);
+
+      img {
+        filter: color-filter(var(--secondary));
+      }
     }
   }
 
-  &.size {
-    width:  23.125rem;
+  &.white {
+    color: var(--primary);
+    background-color: var(--white);
+    font-weight: bold;
+    font-size: 1.25rem;
+    width: 370px;
+
+    img {
+      filter: color-filter(var(--primary));
+    }
+
+    &:hover {
+      background-color: var(--primary);
+      color: var(--white);
+      border: 2px solid var(--white);
+
+      img {
+        filter: color-filter(var(--white));
+      }
+    }
   }
 }

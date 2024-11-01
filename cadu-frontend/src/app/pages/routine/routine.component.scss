@@ -2,148 +2,222 @@
 
 .routine {
   width: 100%;
-  min-height: 100vh;
-  padding: 50px 0;
-  position: relative;
+  height: 80vh;
+
+  @media (min-width: 2000px) {
+    height: 100vh;
+  }
 
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+    height: 100%;
+    position: relative;
 
-  &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+    &__content {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "image title"
+        "image description"
+        "image description"
+        "image cta_logo"
+        "image cta_buttons"
+        "footer footer";
+      height: 100%;
+      padding: 2rem;
+      box-sizing: border-box;
 
-  &__content__images {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      .image {
+        grid-area: image;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
 
-    &--bottom {
-      position: absolute;
-      bottom: 0;
-      width: 2000px;
-      max-width: 100%;
-      display: flex;
-      justify-content: center;
+        img {
+          width: 70%;
+          height: auto;
+        }
+      }
+
+      .title {
+        grid-area: title;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__heasdline {
+          font-size: 2.5rem;
+          color: var(--black);
+          font-weight: 900;
+          line-height: 28px;
+        }
+      }
+
+      .description {
+        grid-area: description;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 2rem;
+
+        &__title {
+          font-size: 1.25rem;
+          line-height: 1.6;
+          text-align: justify;
+          width: 80%;
+        }
+
+        &__subtitle {
+          font-size: 1.25rem;
+          line-height: 1.6;
+          text-align: end;
+          width: 80%;
+        }
+      }
+
+      .cta_logo {
+        grid-area: cta_logo;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+          width: 367px;
+          height: 140px;
+        }
+
+        p {
+          font-size: 0.875rem;
+          color: var(--white);
+        }
+      }
+
+      .cta__buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+
+        .rights {
+          p {
+            color: var(--white);
+          }
+        }
+
+        .social {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 1rem;
+
+          img {
+            width: 60px;
+            height: 80px;
+          }
+        }
+      }
     }
-  }
 
-  &__content__image {
-    position: absolute;
-    width: 2000px;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    margin-left: -650px;
-  }
+    &__images-bottom {
+      img {
+        height: auto;
+        position: absolute;
+        bottom: 4px;
+        left: -150px;
+        width: 125%;
+        z-index: -9;
+        content: url("../../../assets/img/complementary-images/grass.svg");
 
-  &__content__image-compra {
-    bottom: 50px;
-    display: flex;
-    position: absolute;
-    z-index: 1;
-  }
+        @media (max-width: 1600px) {
+          left: 0;
+          min-width: 100%;
+          height: 20%;
+          object-fit: cover;
+          content: url("../../../assets/img/complementary-images/grass-mobile.svg");
+        }
 
-  &__content__text {
-    width: 32rem;
-    text-align: end;
-    padding: 20px;
-    font-family: var(--font-family);
-  }
-
-  &__headline {
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 30px;
-  }
-
-  &__description {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-    width: 100%;
-    text-align: left;
-    display: block;
-    line-height: 1.6;
-  }
-
-  &__cta {
-    font-size: 1.23em;
-    margin-top: 30px;
-  }
-
-  &__store-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  &__store-button {
-    width: 150px;
-    height: auto;
-  }
-
-  &__social-media {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-
-    p{
-      color: var(--white);
-      font-family: var(--font-family);
+        @media (min-width: 2000px) {
+          width: 110%;
+          object-fit: cover;
+        }
+      }
     }
-  }
-
-  &__logo {
-    width: 100px;
-    margin-bottom: 10px;
-  }
-
-  &__social-icons {
-    display: flex;
-    gap: 10px;
-  }
-
-  &__social-icons a {
-    text-decoration: none;
-    color: #000;
-    font-size: 1rem;
-  }
-
-  &__social-icons a:hover {
-    color: #007BFF;
   }
 }
 
-@media (max-width: 768px) {
-  .routine__content {
-    flex-direction: column;
-  }
+@media (max-width: 1600px) {
+  .routine {
+    height: 100vh;
 
-  .routine__content__text {
-    padding: 0;
-  }
+    &__container {
+      &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
 
-  .routine__store-button {
-    width: 120px;
-  }
+        .image {
+          order: 3;
+          img {
+            width: auto;
+          }
+        }
 
-  .routine__social-media {
-    right: 10px;
-    bottom: 10px;
-  }
+        .title {
+          order: 1;
+          justify-content: center;
+        }
 
-  .routine__logo {
-    width: 80px;
+        .description {
+          justify-content: center;
+          align-items: center;
+          order: 2;
+        }
+
+        .cta_logo {
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          order: 4;
+        }
+
+        .cta__buttons {
+          justify-content: center;
+          order: 5;
+        }
+
+        .footer {
+          flex-direction: column;
+          order: 6;
+          gap: 1rem;
+
+          .rights {
+            order: 8;
+          }
+
+          .social {
+            order: 7;
+          }
+        }
+      }
+
+      &__images-bottom {
+        img {
+          left: 0;
+          min-width: 100%;
+          height: 40%;
+          object-fit: cover;
+          content: url("../../../assets/img/complementary-images/grass-mobile.svg");
+        }
+      }
+    }
   }
 }

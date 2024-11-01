@@ -1,4 +1,4 @@
-<button class="store-button" [ngClass]="variant" [ngStyle]="{ 'width': size ? size : 'auto' }">
-  <img *ngIf="icon" [src]="src" [alt]="alt">
+<button class="store-button" [ngClass]="variant" [ngStyle]="{ 'width': size ? size : 'auto', 'height': height ? height : 'auto' }">
+  <img *ngIf="icon" [src]="src" [alt]="alt" class="svg-icon">
   <span>{{ buttonText }}</span>
 </button>
