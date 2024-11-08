@@ -158,17 +158,16 @@
     height: 100vh;
 
     &__container {
+      margin: 20px;
+
       &__content {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
+        flex-wrap: no-wrap;
+        gap: 1rem;
 
         .image {
           order: 3;
-          img {
-            width: auto;
-          }
         }
 
         .title {
