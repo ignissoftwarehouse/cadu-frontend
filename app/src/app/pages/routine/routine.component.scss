@@ -1,0 +1,224 @@
+@import "../../../assets/scss/styles.scss";
+
+.routine {
+  width: 100%;
+  // height: 100vh;
+  // overflow-x: hidden !important;
+
+  &__container {
+    height: 100%;
+    position: relative;
+
+    &__content {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas:
+        "image title"
+        "image description"
+        "image description"
+        "image cta_logo"
+        "image cta_buttons"
+        "footer footer";
+      height: 100%;
+      padding: 2rem;
+      box-sizing: border-box;
+
+      .image {
+        grid-area: image;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+
+      .title {
+        grid-area: title;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__heasdline {
+          font-size: 2.5rem;
+          color: var(--black);
+          font-weight: 900;
+          line-height: 28px;
+        }
+      }
+
+      .description {
+        grid-area: description;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 2rem;
+
+        &__title {
+          font-size: 1.25rem;
+          line-height: 1.6;
+          text-align: justify;
+          width: 80%;
+        }
+
+        &__subtitle {
+          font-size: 1.25rem;
+          line-height: 1.6;
+          text-align: end;
+          width: 80%;
+        }
+      }
+
+      .cta_logo {
+        grid-area: cta_logo;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+          width: 367px;
+          height: 140px;
+        }
+
+        p {
+          font-size: 0.875rem;
+          color: var(--white);
+        }
+      }
+
+      .cta__buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      }
+
+      .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+
+        .rights {
+          p {
+            color: var(--white);
+          }
+        }
+
+        .social {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          gap: 1rem;
+
+          img {
+            width: 60px;
+            height: 80px;
+          }
+        }
+      }
+    }
+
+    &__images-bottom {
+      img {
+        height: auto;
+        position: absolute;
+        bottom: 4px;
+        left: -150px;
+        width: 125%;
+        z-index: -9;
+        content: url("../../../assets/img/complementary-images/grass.svg");
+      }
+    }
+  }
+}
+
+@media (max-width: 1790px) {
+  .routine {
+    // overflow-x: auto !important;
+
+    &__container {
+      margin: 20px;
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: no-wrap;
+        gap: 1rem;
+
+        .image {
+          order: 3;
+        }
+
+        .title {
+          order: 1;
+          justify-content: center;
+        }
+
+        .description {
+          justify-content: center;
+          align-items: center;
+          order: 2;
+        }
+
+        .cta_logo {
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          order: 4;
+        }
+
+        .cta__buttons {
+          justify-content: center;
+          order: 5;
+        }
+
+        .footer {
+          flex-direction: column;
+          order: 6;
+          gap: 1rem;
+
+          .rights {
+            order: 8;
+          }
+
+          .social {
+            order: 7;
+          }
+        }
+      }
+
+      &__images-bottom {
+        img {
+          left: 0;
+          top: 50%;
+          position: absolute;
+          width: 100vw;
+          height: 50%;
+          object-fit: cover;
+          content: url("../../../assets/img/complementary-images/grass-mobile.svg");
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+
+  .routine {
+
+
+    &__container {
+
+
+      &__images-bottom {
+        width: 110%;
+        object-fit: cover;
+      }
+    }
+  }
+}
