@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path ../docs --base-href=/cadu-frontend/",
+    "build": "ng build --output-path ../docs --base-href /cadu-frontend/",
     "build:prod": "ng build --configuration=production  --output-path ../docs --base-href=/cadu-frontend/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
